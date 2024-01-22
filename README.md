@@ -1,2 +1,2 @@
-# PBI-Tabular-Model-WEBAPI
+# PBI-Tabular-Model-Web-API
 PBI Tablular Model Web Api warapper
