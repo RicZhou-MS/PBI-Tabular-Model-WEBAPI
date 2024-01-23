@@ -87,6 +87,7 @@ app.MapPost("/SetDatasetSchemaJsonString", (DatasetModelImportContext importCont
         string errorMessage = importContext.checkModelColumnAndMeasureStatus(targetDatabase.Model);
         if (!string.IsNullOrEmpty(errorMessage))
         {
+            errorMessage = "The model has been imported, but there are errors in the model:\n " + errorMessage;
             return Results.BadRequest(errorMessage);
         }
         //todo: reload targetDatabase dataset model to verify if there is any errormessage in any column or measure
