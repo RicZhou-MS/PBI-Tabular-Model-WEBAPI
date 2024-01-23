@@ -11,10 +11,10 @@
 # docker login -u <user> -p <password> acr0612.azurecr.cn
 
 ## "create a new tag for a Docker image with repository name"
-# docker tag pbi-tabular-web-api:0.1 acr0612.azurecr.cn/pbi-tabular-web-api:0.1
+# docker tag pbitabluarwebapi:latest acr0612.azurecr.cn/pbitabluarwebapi:0.2
 
 ## "push a Docker image to a container registry"
-# docker push acr0612.azurecr.cn/pbi-tabular-web-api:0.1
+# docker push acr0612.azurecr.cn/pbitabluarwebapi:0.2
 
 
 # https://hub.docker.com/_/microsoft-dotnet
