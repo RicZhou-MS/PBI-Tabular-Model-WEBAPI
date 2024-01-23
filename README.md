@@ -12,7 +12,7 @@ PBI Tablular Model Web Api wrapper
 
 # Initialize the project for packages
 
-- Run follow code to install the AAS nuget packages
+- Run following code at project folder in VSCode to install the AAS nuget packages
   ```
   dotnet add package Microsoft.AnalysisServices.AdomdClient.NetCore.retail.amd64
   dotnet add package Microsoft.AnalysisServices.NetCore.retail.amd64
