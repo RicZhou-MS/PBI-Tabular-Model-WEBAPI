@@ -83,13 +83,19 @@ app.MapPost("/SetDatasetSchemaJsonString", (DatasetModelImportContext importCont
         Model newdatabaseModel = Microsoft.AnalysisServices.Tabular.JsonSerializer.DeserializeObject<Model>(importContext.modelSchemaJsonString);
 
         newdatabaseModel.CopyTo(targetDatabase.Model);
+        targetDatabase.Model.SaveChanges(); //save changes to the database
         string errorMessage = importContext.checkModelColumnAndMeasureStatus(targetDatabase.Model);
         if (!string.IsNullOrEmpty(errorMessage))
         {
             return Results.BadRequest(errorMessage);
         }
-
-        targetDatabase.Model.SaveChanges(); //save changes to the database
+        //todo: reload targetDatabase dataset model to verify if there is any errormessage in any column or measure
+        // var targetDatabaseModel = server.Databases.GetByName(importContext.pbiConnection.datasetName).Model;
+        // string errorMessage = importContext.checkModelColumnAndMeasureStatus(targetDatabaseModel);
+        // if (!string.IsNullOrEmpty(errorMessage))
+        // {
+        //     return Results.BadRequest(errorMessage);
+        // }
         // targetDatabase.Model.RequestRefresh(RefreshType.Full);
         // targetDatabase.Model.SaveChanges();
         return Results.NoContent();

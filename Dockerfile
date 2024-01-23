@@ -3,9 +3,9 @@
 # docker build -t pbitabluarwebapi .
 
 ## run below command to run docker image
-## (The run command arguments: Run the app, mapping your machine’s port 6000 to the container’s published port 8080 using -p)
+## (The run command arguments: Run the app, mapping your machine’s port 8080 to the container’s published port 8080 using -p)
 ## (container's published port is specified in appsettings.json(8080 in this case) or ASPNETCORE_HTTP_PORTS in container Env)
-# docker run -it --rm -p 6000:8080 --name pbi-tabular-web-api pbitabluarwebapi
+# docker run -it --rm -p 8080:8080 --name pbi-tabular-web-api pbitabluarwebapi
 
 ## "login to Azure Container Registry"
 # docker login -u <user> -p <password> acr0612.azurecr.cn
@@ -32,7 +32,11 @@ WORKDIR /source
 RUN dotnet publish -c release -o /app --no-restore
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app ./
+
+# Expose the port your application will run on
+EXPOSE 8080
+
 ENTRYPOINT ["dotnet", "PBI-Tabular-Model-Web-API.dll"]

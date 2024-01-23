@@ -41,7 +41,7 @@ public class DatasetModelImportContext
             {
                 if (!string.IsNullOrEmpty(measure.ErrorMessage))
                 {
-                    checkResult += "Table:[" + tbl.Name + "] | Measure: [" + measure.Name + "] | ErrorMessage[" + measure.ErrorMessage + "]\n";
+                    checkResult += "Table:[" + tbl.Name + "] | Measure: [" + measure.Name + "] | ErrorMessage [" + measure.ErrorMessage + "]\n";
                 }
             }
 
