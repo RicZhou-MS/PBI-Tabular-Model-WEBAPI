@@ -18,6 +18,13 @@ PBI Tablular Model Web Api wrapper
   dotnet add package Swashbuckle.AspNetCore
   ```
 
+# Dockerize
+
+- Make sure the [docker desktop](https://www.docker.com/products/docker-desktop/) is running on your machine, then run following command at current project folder to make the docker image
+  ```
+  docker build -t pbitabluarwebapi .
+  ```
+
 # Access Swagger
 
 - Refer to [This link](https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-7.0&tabs=visual-studio-code) for enable Swagger for the API, check follow link for reder swagger interface
