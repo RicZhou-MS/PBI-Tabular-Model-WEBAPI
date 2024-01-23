@@ -29,6 +29,6 @@ PBI Tablular Model Web Api wrapper
 
 # Access Swagger
 
-- Refer to [This link](https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-7.0&tabs=visual-studio-code) for enable Swagger for the API, check follow link for reder swagger interface
+- Refer to [This link](https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-7.0&tabs=visual-studio-code) for enable Swagger for the API, check follow link for render swagger interface
   - `https://host:<port>/swagger`
   - `https://host:<port>/swagger/v1/swagger.json`
