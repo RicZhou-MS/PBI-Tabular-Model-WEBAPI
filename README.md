@@ -2,7 +2,9 @@
 
 PBI Tablular Model Web Api wrapper
 
-# Background Knowledge (don't need to do if clone this project directly)
+# Background Knowledge
+
+(NOTE: don't need to do if you clone this project directly)
 
 - Refer to [this link](https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-8.0&tabs=visual-studio-code) for vscode and .net core preparation for the web api project
 - Run `dotnet new web -o .` to create empty .Net core web api project at local folder
